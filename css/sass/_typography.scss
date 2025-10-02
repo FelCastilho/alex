@@ -17,8 +17,10 @@
 
   @else if $size ==h0 and $device ==mobile {
     font-size: 42px;
-    line-height: 120%;
-    font-weight: 600;
+    line-height: 130%;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: colors.$white-normal;
   }
 
   @else if $size ==h1 and $device ==desktop {
