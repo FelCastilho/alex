@@ -1,0 +1,62 @@
+@use './sass/colors';
+@use './sass/layout';      
+@use './sass/spacing';
+@use './sass/typography';
+@use './sass/menu';
+@use './sass/buttons';
+@use './sass/footer';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  
+  background-color: colors.$primary-normal;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.border-radius {
+  border-radius: 8px;
+}
+
+.block {
+  display: block;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+.disappear {
+  @include layout.responsive(s) {
+    display: none;
+  }
+}
+
+/*
+svg,
+img {
+  //width: 100%;
+  //height: auto;
+}
+*/
+
+ul{
+  list-style: none;
+}

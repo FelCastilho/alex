@@ -1,0 +1,97 @@
+@use './colors';
+@use './layout';
+@use './spacing';
+@use './typography';
+
+a {
+  @include typography.typeface-2(p2, desktop);
+  text-decoration: none;
+  color: colors.$white-normal;
+  transition: .5s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 0.7em 2em;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  text-decoration: none;
+
+  transition: 0.5s ease all;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.custom-button .icon {
+  width: 1.2em;
+  height: 1.2em;
+  transition: transform 0.4s ease;
+}
+
+.custom-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-button:hover .icon {
+  transform: translateX(5px);
+}
+
+.custom-button .text {
+  display: inline-block;
+}
+
+.container-return-top {
+  position: relative;
+}
+
+.return-top {
+  display: none;
+
+  background-color: colors.$primary-normal;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+
+  position: fixed;
+  bottom: 7%;
+  right: calc((100vw - 1440px) / 2);
+  z-index: 1000;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  svg {
+    width: 18px;
+    height: 18px;
+
+    transform: rotate(-90deg);
+  }
+
+}
+
+.return-top.show {
+  display: flex;
+}
