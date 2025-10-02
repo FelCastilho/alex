@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .color-white {
   color: #F9FAFF;
 }
@@ -471,83 +471,60 @@
   display: flex;
   justify-content: center;
 }
-
-.bg-slider {
-  overflow: hidden;
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  transition: all 0.5s ease-in-out;
+.hero h1 {
+  color: #242424;
 }
-.bg-slider .overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 2;
-  pointer-events: none;
-}
-.bg-slider img {
-  position: absolute;
-  transition: all 0.5s ease-in-out;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 0;
-  transition: 0.5s ease-in-out;
+.hero p {
+  color: #868686;
 }
 
-.services {
+.projects {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
-.grid-services {
+.grid-projects {
   display: grid;
   gap: 32px;
   width: 100%;
   height: 100%;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, minmax(256px, auto));
-  grid-template-areas: "a a b b c c" "d d d e e e";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, minmax(360px, auto));
+  grid-template-areas: "a b" "c d";
 }
 @media screen and (max-width: 960px) {
-  .grid-services {
+  .grid-projects {
     grid-template-columns: 1fr;
-    grid-template-areas: "a" "b" "c" "d" "e";
+    grid-template-rows: repeat(4, minmax(256px, auto));
+    grid-template-areas: "a" "b" "c" "d";
   }
 }
 
-.construcao-civil {
+.tabi {
   grid-area: a;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/construcao-civil.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/tabi-capa.webp);
   color: white;
 }
 
-.pintura-predial {
+.plexo {
   grid-area: b;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/pintura-predial.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/plexo-capa.webp);
 }
 
-.terraplanagem {
+.orbis {
   grid-area: c;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/terraplanagem.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/orbis-capa.webp);
 }
 
-.concreto-armado {
+.clave {
   grid-area: d;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/concreto-armado.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/clave-capa.webp);
 }
 
-.estruturas-metalicas {
-  grid-area: e;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../img/estruturas-metalicas.jpg);
-  transition: 0.5s ease;
-}
-
-.service-img {
+.projects-img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -561,11 +538,11 @@
   cursor: pointer;
 }
 @media screen and (max-width: 960px) {
-  .service-img {
+  .projects-img {
     height: 256px;
   }
 }
-.service-img .arrow-services {
+.projects-img .arrow-projects {
   align-self: flex-end;
   justify-self: flex-start;
   background-color: rgba(255, 255, 255, 0.1);
@@ -579,11 +556,11 @@
   justify-content: center;
   cursor: pointer;
 }
-.service-img .arrow-services svg {
+.projects-img .arrow-projects svg {
   width: 16px;
   height: 16px;
 }
-.service-img h3 {
+.projects-img h3 {
   align-self: flex-start;
   color: #F9FAFF;
   font-weight: 500;
@@ -885,16 +862,17 @@
 }
 
 .h0 {
-  color: black;
-  font-family: "Poppins", sans-serif;
+  color: #242424;
+  font-family: "Inter", sans-serif;
   font-size: 64px;
-  line-height: 100%;
-  font-weight: 600;
+  line-height: 130%;
+  font-weight: 800;
+  text-transform: uppercase;
   color: #F9FAFF;
 }
 @media screen and (max-width: 960px) {
   .h0 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 42px;
     line-height: 120%;
     font-weight: 600;
@@ -902,29 +880,31 @@
 }
 
 h1 {
-  color: black;
+  color: #242424;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  font-size: 36px;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
   line-height: 130%;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 @media screen and (max-width: 960px) {
   h1 {
-    font-family: "Poppins", sans-serif;
-    font-size: 32px;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
     line-height: 130%;
   }
 }
 
 h2 {
   color: black;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 32px;
   line-height: 120%;
 }
 @media screen and (max-width: 960px) {
   h2 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 28px;
     line-height: 120%;
   }
@@ -932,13 +912,13 @@ h2 {
 
 h3 {
   color: #000;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 24px;
   line-height: 130%;
 }
 @media screen and (max-width: 960px) {
   h3 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 20px;
     line-height: 130%;
   }
@@ -947,13 +927,13 @@ h3 {
 h4 {
   color: black;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 140%;
 }
 @media screen and (max-width: 960px) {
   h4 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     line-height: 140%;
   }
@@ -965,13 +945,13 @@ h5 {
   letter-spacing: 0.2em;
   color: #000;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 150%;
 }
 @media screen and (max-width: 960px) {
   h5 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 14px;
     line-height: 150%;
   }
@@ -979,13 +959,13 @@ h5 {
 
 .p1 {
   color: #F9FAFF;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 24px;
   line-height: 130%;
 }
 @media screen and (max-width: 960px) {
   .p1 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     line-height: 150%;
   }
@@ -993,13 +973,13 @@ h5 {
 
 p {
   color: #646465;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 140%;
 }
 @media screen and (max-width: 960px) {
   p {
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 14px;
     line-height: 150%;
   }
@@ -1012,13 +992,13 @@ p {
 
 strong {
   color: black;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 140%;
 }
 @media screen and (max-width: 960px) {
   strong {
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 14px;
     line-height: 150%;
   }
@@ -1037,17 +1017,11 @@ strong {
   font-weight: 500;
 }
 
-.title-section {
+.title-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
   border-radius: 4px;
-}
-
-.arrow-title {
-  width: 14px;
-  height: 14px;
-  fill: #d79600;
 }
 
 .services-title-active {
@@ -1291,7 +1265,7 @@ header {
 .nav-link-mobile {
   display: inline-block;
   color: #F1F4DC;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 24px;
   line-height: 130%;
   padding: 16px 24px;
@@ -1323,7 +1297,7 @@ header {
   }
 }
 a {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 140%;
   text-decoration: none;
@@ -1486,7 +1460,7 @@ html {
 
 body {
   width: 100%;
-  background-color: #F1F4DC;
+  background-color: #fff;
 }
 
 .border {

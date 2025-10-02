@@ -168,108 +168,78 @@ $container-s: 540px;
 
   display: flex;
   justify-content: center;
-}
 
-.bg-slider {
-  overflow: hidden;
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-
-  transition: all 0.5s ease-in-out;
-
-  .overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.7); // escurecimento
-    z-index: 2;
-    pointer-events: none;
+  h1{
+    color: #242424;
   }
-
-  img {
-    position: absolute;
-
-    transition: all 0.5s ease-in-out;
-    width: 100%;
-    height: 100%;
-
-    opacity: 0;
-    z-index: 0;
-    transition: 0.5s ease-in-out;
+  p{
+    color: #868686;
   }
 }
 
 // SERVICES SECTION
 
-.services {
+.projects {
   height: 100%;
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
-.grid-services {
+.grid-projects {
   display: grid;
   gap: 32px;
   width: 100%;
   height: 100%;
 
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, minmax(256px, auto));
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, minmax(360px, auto));
 
   grid-template-areas:
-    "a a b b c c"
-    "d d d e e e"
+    "a b"
+    "c d"
   ;
 
   @include responsive(s) {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(256px, auto));
     grid-template-areas:
       "a"
       "b"
       "c"
-      "d"
-      "e";
+      "d";
   }
 }
 
-.construcao-civil {
+.tabi {
   grid-area: a;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
-    url(../../img/construcao-civil.jpg);
+    url(../../img/tabi-capa.webp);
 
   color: white;
 }
 
-.pintura-predial {
+.plexo {
   grid-area: b;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
-    url(../../img/pintura-predial.jpg);
+    url(../../img/plexo-capa.webp);
 }
 
-.terraplanagem {
+.orbis {
   grid-area: c;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
-    url(../../img/terraplanagem.jpg);
+    url(../../img/orbis-capa.webp);
 }
 
-.concreto-armado {
+.clave {
   grid-area: d;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
-    url(../../img/concreto-armado.jpg);
+    url(../../img/clave-capa.webp);
 }
 
-.estruturas-metalicas {
-  grid-area: e;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
-    url(../../img/estruturas-metalicas.jpg);
-
-  transition: .5s ease;
-}
-
-.service-img {
+.projects-img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -290,8 +260,7 @@ $container-s: 540px;
     height: 256px;
   }
 
-  .arrow-services {
-
+  .arrow-projects {
     align-self: flex-end;
     justify-self: flex-start;
 
