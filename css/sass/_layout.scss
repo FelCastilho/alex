@@ -169,10 +169,11 @@ $container-s: 540px;
   display: flex;
   justify-content: center;
 
-  h1{
+  h1 {
     color: #242424;
   }
-  p{
+
+  p {
     color: #868686;
   }
 }
@@ -313,19 +314,23 @@ $container-s: 540px;
 
 // ABOUT SECTION
 
-.about{
+.about {
   background-image: url("../../img/BG.png");
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.about-img{
+.about-img {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 
   width: 100%;
+
+  @include responsive(s) {
+    justify-content: flex-start;
+  }
 }
 
 .checklist-item-1 {
@@ -333,186 +338,23 @@ $container-s: 540px;
   align-items: center;
   gap: 12px;
 
-  p{
+  p {
     font-size: 20px;
   }
 }
 
-// STEPS SECTION
-
-.steps {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  @include responsive(s) {
-    height: 100%;
-  }
-}
-
-.steps-itens {
-  display: flex;
-  gap: 32px;
-  margin-top: 64px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  @include responsive(s) {
-    flex-direction: column;
-  }
-}
-
-.step {
-  background-color: white;
-  box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.08);
-  padding: 32px;
-
-  width: calc((100% - 96px) / 4);
-  min-height: 240px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  border-radius: 0;
-
-  .number-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 32px;
-    height: 32px;
-    background-color: colors.$primary-normal;
-    border-radius: 6px;
-    margin-bottom: 16px;
-
-    .number-steps {
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0;
-    }
-  }
-
-  h4 {
-    margin-bottom: 24px;
-  }
-
-  .steps-text {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  @include responsive(s) {
-    width: 100%;
-  }
-}
-
-.step.highlight-step {
-  background-color: colors.$primary-normal;
-  border-top-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-
-  h4,
-  .steps-text {
-    color: white;
-  }
-
-  .number-container {
-    background-color: white;
-    font-weight: 600;
-
-    .number-steps {
-      color: colors.$primary-normal;
-      font-weight: 700;
-    }
-  }
-}
-
-// FEEDBACKS
-
-/* Fundo da seção */
-.section-feedbacks {
-  background:
-    linear-gradient(0deg, rgba(5, 19, 94, 0.90) 0%, rgba(5, 19, 94, 0.90) 100%),
-    url("../../img/feedback-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 80px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-/* Conteúdo centralizado */
-.feedbacks {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 900px;
-  width: 100%;
-}
-
-
-.container-title-feedbacks {
-  margin-bottom: 40px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  h1, h5{
-    color: white;
-  }
-}
-
-.container-cards-feedbacks{
-  display: flex;
-  gap: 32px;
-
-  @include responsive(s) {
-    flex-direction: column;
-    gap: 16px;
-  }
-}
-
-.feedback-card {
-  background-color: white;
-  padding: 30px;
-  max-width: 400px;
-  border-radius: 6px;
-  text-align: left;
-}
-
-.feedback-text {
-  margin: 20px 0;
-  font-size: 16px;
-  color: #333;
-}
-
-.feedback-author {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.author-name {
-  font-weight: 600;
-  font-size: 16px;
-  color: #000;
-}
-
-
 // CTA SECTION
+
 .cta {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  h1{
+    color: #242424;
+  }
+
 
   @include responsive(s) {
     height: auto;
@@ -566,7 +408,7 @@ $container-s: 540px;
   flex-direction: column;
   align-items: end;
   justify-content: center;
-  
+
   margin-top: 40px;
 }
 

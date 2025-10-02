@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .color-white {
   color: #F9FAFF;
@@ -597,6 +596,11 @@
   justify-content: flex-end;
   width: 100%;
 }
+@media screen and (max-width: 960px) {
+  .about-img {
+    justify-content: flex-start;
+  }
+}
 
 .checklist-item-1 {
   display: flex;
@@ -607,163 +611,14 @@
   font-size: 20px;
 }
 
-.steps {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-@media screen and (max-width: 960px) {
-  .steps {
-    height: 100%;
-  }
-}
-
-.steps-itens {
-  display: flex;
-  gap: 32px;
-  margin-top: 64px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-@media screen and (max-width: 960px) {
-  .steps-itens {
-    flex-direction: column;
-  }
-}
-
-.step {
-  background-color: white;
-  box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.08);
-  padding: 32px;
-  width: calc((100% - 96px) / 4);
-  min-height: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius: 0;
-}
-.step .number-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  background-color: #F1F4DC;
-  border-radius: 6px;
-  margin-bottom: 16px;
-}
-.step .number-container .number-steps {
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0;
-}
-.step h4 {
-  margin-bottom: 24px;
-}
-.step .steps-text {
-  font-size: 14px;
-  line-height: 1.6;
-}
-@media screen and (max-width: 960px) {
-  .step {
-    width: 100%;
-  }
-}
-
-.step.highlight-step {
-  background-color: #F1F4DC;
-  border-top-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-.step.highlight-step h4,
-.step.highlight-step .steps-text {
-  color: white;
-}
-.step.highlight-step .number-container {
-  background-color: white;
-  font-weight: 600;
-}
-.step.highlight-step .number-container .number-steps {
-  color: #F1F4DC;
-  font-weight: 700;
-}
-
-/* Fundo da seção */
-.section-feedbacks {
-  background: linear-gradient(0deg, rgba(5, 19, 94, 0.9) 0%, rgba(5, 19, 94, 0.9) 100%), url("../../img/feedback-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 80px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-/* Conteúdo centralizado */
-.feedbacks {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 900px;
-  width: 100%;
-}
-
-.container-title-feedbacks {
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.container-title-feedbacks h1, .container-title-feedbacks h5 {
-  color: white;
-}
-
-.container-cards-feedbacks {
-  display: flex;
-  gap: 32px;
-}
-@media screen and (max-width: 960px) {
-  .container-cards-feedbacks {
-    flex-direction: column;
-    gap: 16px;
-  }
-}
-
-.feedback-card {
-  background-color: white;
-  padding: 30px;
-  max-width: 400px;
-  border-radius: 6px;
-  text-align: left;
-}
-
-.feedback-text {
-  margin: 20px 0;
-  font-size: 16px;
-  color: #333;
-}
-
-.feedback-author {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.author-name {
-  font-weight: 600;
-  font-size: 16px;
-  color: #000;
-}
-
 .cta {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.cta h1 {
+  color: #242424;
 }
 @media screen and (max-width: 960px) {
   .cta {
@@ -1362,31 +1217,21 @@ a:hover {
   display: flex;
 }
 
-footer {
-  background: #F1F4DC;
-  padding: 60px 0;
-}
-footer h4 {
-  color: #F9FAFF;
-}
-
-.footer-icons a {
-  margin-right: 8px;
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  border-top: 2px solid rgba(77, 77, 77, 0.1);
 }
 
-.footer-text {
-  color: #F9FAFF;
-  margin-top: 16px;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-}
-.footer-links li {
+.footer-icons {
+  display: flex;
+  gap: 32px;
   margin-top: 22px;
 }
-.footer-links a {
+.footer-icons a {
   color: #919191;
   text-decoration: none;
 }
