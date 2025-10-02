@@ -271,6 +271,7 @@ $container-s: 540px;
   &:hover::before {
     transform: scale(1.1);
   }
+
   * {
     position: relative;
     z-index: 1;
@@ -312,72 +313,29 @@ $container-s: 540px;
 
 // ABOUT SECTION
 
-.about-img {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-
-  position: relative;
-}
-
-.about-img-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, minmax(256px, auto));
-  grid-template-areas:
-    "img1 img2"
-    "img1 img3";
-
-  gap: 32px;
-
-  @include responsive(s) {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, minmax(256px, auto));
-    grid-template-areas:
-      "img1"
-      "img2"
-      "img3";
-
-  }
-}
-
-.about-img-1,
-.about-img-2,
-.about-img-3 {
-  width: 100%;
+.about{
+  background-image: url("../../img/BG.png");
   height: 100%;
-  object-fit: cover;
-
-  border-top-left-radius: 26px;
-  border-bottom-right-radius: 26px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.about-img-1 {
-  grid-area: img1;
+.about-img{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
 }
 
-.about-img-2 {
-  grid-area: img2;
-}
+.checklist-item-1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
-.about-img-3 {
-  grid-area: img3;
-}
-
-#asset-ball-1 {
-  position: absolute;
-  left: -7.2%;
-  bottom: -11%;
-  z-index: -1;
-}
-
-
-#asset-ball-2 {
-  position: absolute;
-  right: -7.2%;
-  top: -11%;
-  z-index: 0;
-
+  p{
+    font-size: 20px;
+  }
 }
 
 // STEPS SECTION
