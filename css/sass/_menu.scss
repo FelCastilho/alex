@@ -17,8 +17,10 @@ header {
 }
 
 .active-header {
-    background-color: colors.$tertiary-normal;
+    background-color: colors.$primary-normal;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        color: colors.$tertiary-normal;
+
     
     margin-top: 24px;
 
@@ -117,14 +119,19 @@ header {
     }
 }
 
-.logo {
+.logo{
     z-index: 1000;
+}
+
+.logo-img{
+    width: 80%;
 }
 
 .nav-link-desktop {
     display: inline-block;
     padding: 12px 16px;
-    color: colors.$white-normal;
+    color: colors.$tertiary-normal;
+    font-weight: 700;
 }
 
 //MOBILE MENU

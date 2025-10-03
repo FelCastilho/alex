@@ -216,7 +216,7 @@ $container-s: 540px;
 
 .tabi {
   grid-area: a;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+  background-image:
     url(../../img/tabi-capa.webp);
 
   color: white;
@@ -224,19 +224,19 @@ $container-s: 540px;
 
 .plexo {
   grid-area: b;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+  background-image:
     url(../../img/plexo-capa.webp);
 }
 
 .orbis {
   grid-area: c;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+  background-image:
     url(../../img/orbis-capa.webp);
 }
 
 .clave {
   grid-area: d;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+  background-image:
     url(../../img/clave-capa.webp);
 }
 
@@ -321,13 +321,19 @@ $container-s: 540px;
   background-repeat: no-repeat;
 }
 
-.about-img {
+.about-img-container {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 
-  width: 100%;
+  @include responsive(s) {
+    justify-content: flex-start;
+  }
+}
 
+.about-img {
+  width: 70%;
+  border-radius: 12px;
   @include responsive(s) {
     justify-content: flex-start;
   }
@@ -351,7 +357,7 @@ $container-s: 540px;
   align-items: center;
   justify-content: center;
 
-  h1{
+  h1 {
     color: #242424;
   }
 
