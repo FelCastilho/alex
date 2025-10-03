@@ -44,59 +44,18 @@ const showMenu = (toggleId, navId) => {
 
 showMenu("bx", "menu-mobile");
 
-// SLIDE
-const bullet = document.querySelectorAll(".bullet");
-const images = document.querySelectorAll(".img-slider");
+// Fecha menu mobile ao clicar em um link interno
+const navLinks = document.querySelectorAll("#menu-mobile a"); // todos os links dentro do menu
 
-bullet.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    images.forEach((img, i) => {
-      img.style.opacity = "0";
-      img.classList.remove("active-img");
-    });
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    const nav = document.getElementById("menu-mobile");
+    const toggle = document.getElementById("bx");
 
-    images[index].style.opacity = "1";
-    images[index].classList.add("active-img");
+    nav.classList.remove("active-menu-mobile");
+    toggle.classList.remove("active-bx");
 
-    bullet.forEach((b) => b.classList.remove("active-bullet"));
-    bullet[index].classList.add("active-bullet");
-  });
-});
-
-// SCROLL TO TOP
-const returnTopBtn = document.querySelector(".return-top");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    returnTopBtn.classList.add("show");
-  } else {
-    returnTopBtn.classList.remove("show");
-  }
-});
-
-returnTopBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
-
-// ROTATE ARROW HOVER
-const serviceItems = document.querySelectorAll(".service-img");
-
-serviceItems.forEach((item) => {
-  const arrow = item.querySelector(".arrow-services");
-  const title = item.querySelector("h3");
-
-  item.addEventListener("mouseenter", () => {
-    arrow.style.transition = "transform 0.3s ease";
-    arrow.style.transform = "rotate(-45deg)";
-    title.classList.add("hovered");
-  });
-
-  item.addEventListener("mouseleave", () => {
-    arrow.style.transition = "transform 0.3s ease";
-    arrow.style.transform = "rotate(0deg)";
-    title.classList.remove("hovered");
+    // reseta transform
+    nav.style.transform = "translate3d(0,-100px,0)";
   });
 });
