@@ -602,7 +602,7 @@
 }
 
 .about-img {
-  width: 70%;
+  width: 50%;
   border-radius: 12px;
 }
 @media screen and (max-width: 960px) {
